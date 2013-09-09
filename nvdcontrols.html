@@ -1,0 +1,137 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/cosmo/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
+    <link rel='stylesheet' href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css">
+    <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
+    <link rel='stylesheet' href='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/nvd3/css/nv.d3.css'>
+    <link rel='stylesheet' href='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/nvd3/css/rNVD3.css'>
+    
+    <script src='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/nvd3/js/jquery-1.8.2.min.js' type='text/javascript'></script>
+    <script src='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/nvd3/js/d3.v3.min.js' type='text/javascript'></script>
+    <script src='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/nvd3/js/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 100%;
+      height: 400px;
+    }
+    </style>
+    
+  </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='span3'>
+      <form class='well'>
+        <label><b>Select  x :</b></label>
+    		<select ng-model="opts.x" 
+          ng-options="ctl for ctl in controls.x.values">   
+    		</select><br>
+        <label><b>Select  y :</b></label>
+    		<select ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+      </form>
+    </div>
+    <div class='span8'>
+      <div class="bs-docs-example">
+        <div id='chart211c308d6382' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart211c308d6382",
+"width":    500,
+"height":    400,
+"x": "Points",
+"y": "Steals",
+"group": "Year",
+"type": "scatterChart",
+"id": "chart211c308d6382" 
+}
+  $scope.data = [{"Player":"Kelly Olynyk","Points":571,"Rebounds":235,"Assists":55,"TurnOvers":77,"Steals":22,"Year":"2012-2013"},{"Player":"Elias Harris","Points":495,"Rebounds":253,"Assists":53,"TurnOvers":60,"Steals":40,"Year":"2012-2013"},{"Player":"Kevin Pangos","Points":415,"Rebounds":93,"Assists":116,"TurnOvers":51,"Steals":52,"Year":"2012-2013"},{"Player":"Gary Bell, Jr.","Points":306,"Rebounds":75,"Assists":73,"TurnOvers":43,"Steals":27,"Year":"2012-2013"},{"Player":"Sam Dower","Points":242,"Rebounds":94,"Assists":11,"TurnOvers":30,"Steals":16,"Year":"2012-2013"},{"Player":"Przemek Karnowski","Points":184,"Rebounds":90,"Assists":7,"TurnOvers":27,"Steals":6,"Year":"2012-2013"},{"Player":"David Stockton","Points":128,"Rebounds":60,"Assists":119,"TurnOvers":43,"Steals":53,"Year":"2012-2013"},{"Player":"Drew Barham","Points":89,"Rebounds":40,"Assists":11,"TurnOvers":7,"Steals":6,"Year":"2012-2013"},{"Player":"Guy Landry Edi","Points":93,"Rebounds":65,"Assists":10,"TurnOvers":19,"Steals":9,"Year":"2012-2013"},{"Player":"Kyle Dranginis","Points":96,"Rebounds":49,"Assists":34,"TurnOvers":25,"Steals":14,"Year":"2012-2013"},{"Player":"Mike Hart","Points":70,"Rebounds":137,"Assists":39,"TurnOvers":8,"Steals":30,"Year":"2012-2013"},{"Player":"Rem Bakamus","Points":7,"Rebounds":1,"Assists":1,"TurnOvers":1,"Steals":1,"Year":"2012-2013"},{"Player":"Brian Bhaskar","Points":0,"Rebounds":3,"Assists":1,"TurnOvers":0,"Steals":1,"Year":"2012-2013"},{"Player":"Kevin Pangos","Points":450,"Rebounds":89,"Assists":111,"TurnOvers":60,"Steals":40,"Year":"2011-2012"},{"Player":"Elias Harris","Points":433,"Rebounds":281,"Assists":41,"TurnOvers":58,"Steals":30,"Year":"2011-2012"},{"Player":"Robert Sacre","Points":384,"Rebounds":208,"Assists":24,"TurnOvers":60,"Steals":12,"Year":"2011-2012"},{"Player":"Gary Bell, Jr.","Points":342,"Rebounds":81,"Assists":66,"TurnOvers":53,"Steals":23,"Year":"2011-2012"},{"Player":"Sam Dower","Points":274,"Rebounds":123,"Assists":19,"TurnOvers":41,"Steals":17,"Year":"2011-2012"},{"Player":"Guy Landry Edi","Points":138,"Rebounds":60,"Assists":22,"TurnOvers":23,"Steals":14,"Year":"2011-2012"},{"Player":"Marquise Carter","Points":127,"Rebounds":50,"Assists":56,"TurnOvers":46,"Steals":26,"Year":"2011-2012"},{"Player":"David Stockton","Points":123,"Rebounds":34,"Assists":79,"TurnOvers":49,"Steals":27,"Year":"2011-2012"},{"Player":"Ryan Spangler","Points":56,"Rebounds":52,"Assists":4,"TurnOvers":6,"Steals":2,"Year":"2011-2012"},{"Player":"Mike Hart","Points":56,"Rebounds":95,"Assists":19,"TurnOvers":15,"Steals":25,"Year":"2011-2012"},{"Player":"Mathis Monninghoff","Points":38,"Rebounds":13,"Assists":8,"TurnOvers":7,"Steals":2,"Year":"2011-2012"},{"Player":"Mathis Keita","Points":15,"Rebounds":9,"Assists":6,"TurnOvers":4,"Steals":5,"Year":"2011-2012"},{"Player":"Steven Gray","Points":474,"Rebounds":132,"Assists":136,"TurnOvers":73,"Steals":57,"Year":"2010-2011"},{"Player":"Robert Sacre","Points":439,"Rebounds":222,"Assists":40,"TurnOvers":75,"Steals":27,"Year":"2010-2011"},{"Player":"Elias Harris","Points":421,"Rebounds":204,"Assists":45,"TurnOvers":60,"Steals":21,"Year":"2010-2011"},{"Player":"Sam Dower","Points":266,"Rebounds":114,"Assists":12,"TurnOvers":28,"Steals":14,"Year":"2010-2011"},{"Player":"Marquise Carter","Points":220,"Rebounds":57,"Assists":72,"TurnOvers":39,"Steals":33,"Year":"2010-2011"},{"Player":"Kelly Olynyk","Points":202,"Rebounds":133,"Assists":26,"TurnOvers":42,"Steals":12,"Year":"2010-2011"},{"Player":"Demetri Goodson","Points":183,"Rebounds":98,"Assists":91,"TurnOvers":57,"Steals":26,"Year":"2010-2011"},{"Player":"Manny Arop","Points":128,"Rebounds":82,"Assists":15,"TurnOvers":25,"Steals":11,"Year":"2010-2011"},{"Player":"Mathis Monninghoff","Points":128,"Rebounds":45,"Assists":11,"TurnOvers":11,"Steals":3,"Year":"2010-2011"},{"Player":"David Stockton","Points":142,"Rebounds":45,"Assists":73,"TurnOvers":37,"Steals":32,"Year":"2010-2011"},{"Player":"Mathis Keita","Points":61,"Rebounds":28,"Assists":15,"TurnOvers":14,"Steals":11,"Year":"2010-2011"},{"Player":"Mike Hart","Points":20,"Rebounds":34,"Assists":6,"TurnOvers":5,"Steals":7,"Year":"2010-2011"},{"Player":"Matt Bouldin","Points":514,"Rebounds":154,"Assists":132,"TurnOvers":75,"Steals":46,"Year":"2009-2010"},{"Player":"Elias Harris","Points":508,"Rebounds":241,"Assists":38,"TurnOvers":64,"Steals":32,"Year":"2009-2010"},{"Player":"Steven Gray","Points":462,"Rebounds":137,"Assists":98,"TurnOvers":76,"Steals":39,"Year":"2009-2010"},{"Player":"Robert Sacre","Points":350,"Rebounds":183,"Assists":20,"TurnOvers":68,"Steals":23,"Year":"2009-2010"},{"Player":"Demetri Goodson","Points":217,"Rebounds":72,"Assists":61,"TurnOvers":54,"Steals":30,"Year":"2009-2010"},{"Player":"Bol Kong","Points":138,"Rebounds":46,"Assists":18,"TurnOvers":15,"Steals":14,"Year":"2009-2010"},{"Player":"Kelly Olynyk","Points":130,"Rebounds":93,"Assists":26,"TurnOvers":21,"Steals":18,"Year":"2009-2010"},{"Player":"Manny Arop","Points":107,"Rebounds":119,"Assists":23,"TurnOvers":15,"Steals":9,"Year":"2009-2010"},{"Player":"G.J. Vilarino","Points":57,"Rebounds":13,"Assists":5,"TurnOvers":10,"Steals":8,"Year":"2009-2010"},{"Player":"Grant Gibbs","Points":52,"Rebounds":46,"Assists":21,"TurnOvers":16,"Steals":4,"Year":"2009-2010"},{"Player":"Will Foster","Points":58,"Rebounds":43,"Assists":8,"TurnOvers":15,"Steals":2,"Year":"2009-2010"},{"Player":"Andy Poling","Points":11,"Rebounds":11,"Assists":0,"TurnOvers":2,"Steals":0,"Year":"2009-2010"},{"Player":"Mike Hart","Points":8,"Rebounds":11,"Assists":4,"TurnOvers":2,"Steals":2,"Year":"2009-2010"},{"Player":"Chris Pontarolo-Maag","Points":2,"Rebounds":5,"Assists":2,"TurnOvers":2,"Steals":0,"Year":"2009-2010"},{"Player":"Josh Heytvelt","Points":507,"Rebounds":222,"Assists":22,"TurnOvers":43,"Steals":20,"Year":"2008-2009"},{"Player":"Matt Bouldin","Points":463,"Rebounds":139,"Assists":115,"TurnOvers":58,"Steals":52,"Year":"2008-2009"},{"Player":"Austin Daye","Points":431,"Rebounds":232,"Assists":37,"TurnOvers":73,"Steals":24,"Year":"2008-2009"},{"Player":"Jeremy Pargo","Points":348,"Rebounds":117,"Assists":167,"TurnOvers":81,"Steals":46,"Year":"2008-2009"},{"Player":"Micah Downs","Points":325,"Rebounds":155,"Assists":39,"TurnOvers":26,"Steals":30,"Year":"2008-2009"},{"Player":"Steven Gray","Points":309,"Rebounds":109,"Assists":70,"TurnOvers":30,"Steals":35,"Year":"2008-2009"},{"Player":"Demetri Goodson","Points":129,"Rebounds":44,"Assists":54,"TurnOvers":34,"Steals":17,"Year":"2008-2009"},{"Player":"Robert Sacre","Points":15,"Rebounds":14,"Assists":0,"TurnOvers":2,"Steals":1,"Year":"2008-2009"},{"Player":"Ira Brown","Points":90,"Rebounds":77,"Assists":6,"TurnOvers":18,"Steals":14,"Year":"2008-2009"},{"Player":"Andrew Sorenson","Points":39,"Rebounds":5,"Assists":0,"TurnOvers":2,"Steals":4,"Year":"2008-2009"},{"Player":"Will Foster","Points":25,"Rebounds":50,"Assists":0,"TurnOvers":10,"Steals":3,"Year":"2008-2009"},{"Player":"Chris Pontarolo-Maag","Points":3,"Rebounds":2,"Assists":2,"TurnOvers":0,"Steals":0,"Year":"2008-2009"},{"Player":"Matt Bouldin","Points":403,"Rebounds":117,"Assists":93,"TurnOvers":79,"Steals":45,"Year":"2007-2008"},{"Player":"Jeremy Pargo","Points":398,"Rebounds":121,"Assists":199,"TurnOvers":111,"Steals":47,"Year":"2007-2008"},{"Player":"Austin Daye","Points":347,"Rebounds":154,"Assists":32,"TurnOvers":56,"Steals":21,"Year":"2007-2008"},{"Player":"Josh Heytvelt","Points":226,"Rebounds":108,"Assists":13,"TurnOvers":34,"Steals":16,"Year":"2007-2008"},{"Player":"David Pendergraft","Points":287,"Rebounds":144,"Assists":28,"TurnOvers":28,"Steals":29,"Year":"2007-2008"},{"Player":"Steven Gray","Points":187,"Rebounds":64,"Assists":35,"TurnOvers":30,"Steals":24,"Year":"2007-2008"},{"Player":"Micah Downs","Points":262,"Rebounds":123,"Assists":46,"TurnOvers":48,"Steals":29,"Year":"2007-2008"},{"Player":"Abdullahi Kuso","Points":198,"Rebounds":133,"Assists":7,"TurnOvers":34,"Steals":18,"Year":"2007-2008"},{"Player":"Larry Gurganious","Points":86,"Rebounds":67,"Assists":16,"TurnOvers":25,"Steals":13,"Year":"2007-2008"},{"Player":"Robert Sacre","Points":82,"Rebounds":52,"Assists":7,"TurnOvers":15,"Steals":7,"Year":"2007-2008"},{"Player":"Ira Brown","Points":27,"Rebounds":23,"Assists":3,"TurnOvers":2,"Steals":2,"Year":"2007-2008"},{"Player":"Theo Davis","Points":4,"Rebounds":1,"Assists":0,"TurnOvers":1,"Steals":0,"Year":"2007-2008"},{"Player":"Will Foster","Points":12,"Rebounds":14,"Assists":0,"TurnOvers":6,"Steals":1,"Year":"2007-2008"},{"Player":"Andrew Sorenson","Points":5,"Rebounds":5,"Assists":0,"TurnOvers":1,"Steals":2,"Year":"2007-2008"},{"Player":"Derek Raivio","Points":613,"Rebounds":106,"Assists":89,"TurnOvers":61,"Steals":50,"Year":"2006-2007"},{"Player":"Josh Heytvelt","Points":388,"Rebounds":193,"Assists":11,"TurnOvers":40,"Steals":11,"Year":"2006-2007"},{"Player":"Jeremy Pargo","Points":410,"Rebounds":146,"Assists":156,"TurnOvers":111,"Steals":48,"Year":"2006-2007"},{"Player":"Matt Bouldin","Points":303,"Rebounds":124,"Assists":104,"TurnOvers":69,"Steals":27,"Year":"2006-2007"},{"Player":"Micah Downs","Points":137,"Rebounds":63,"Assists":16,"TurnOvers":15,"Steals":9,"Year":"2006-2007"},{"Player":"Sean Mallon","Points":271,"Rebounds":143,"Assists":28,"TurnOvers":46,"Steals":15,"Year":"2006-2007"},{"Player":"David Pendergraft","Points":248,"Rebounds":151,"Assists":32,"TurnOvers":29,"Steals":22,"Year":"2006-2007"},{"Player":"Abdullahi Kuso","Points":165,"Rebounds":158,"Assists":11,"TurnOvers":42,"Steals":13,"Year":"2006-2007"},{"Player":"Pierre-Marie Altidor-Cespedes","Points":110,"Rebounds":56,"Assists":42,"TurnOvers":37,"Steals":14,"Year":"2006-2007"},{"Player":"David Burgess","Points":6,"Rebounds":8,"Assists":1,"TurnOvers":4,"Steals":0,"Year":"2006-2007"},{"Player":"Will Foster","Points":8,"Rebounds":13,"Assists":0,"TurnOvers":4,"Steals":1,"Year":"2006-2007"},{"Player":"Andrew Sorenson","Points":4,"Rebounds":2,"Assists":1,"TurnOvers":1,"Steals":1,"Year":"2006-2007"},{"Player":"Jordan Mast","Points":5,"Rebounds":6,"Assists":1,"TurnOvers":3,"Steals":1,"Year":"2006-2007"},{"Player":"Adam Morrison","Points":926,"Rebounds":182,"Assists":58,"TurnOvers":76,"Steals":35,"Year":"2005-2006"},{"Player":"J.P. Batista","Points":636,"Rebounds":310,"Assists":46,"TurnOvers":80,"Steals":30,"Year":"2005-2006"},{"Player":"Derek Raivio","Points":343,"Rebounds":70,"Assists":87,"TurnOvers":46,"Steals":47,"Year":"2005-2006"},{"Player":"Sean Mallon","Points":225,"Rebounds":150,"Assists":38,"TurnOvers":48,"Steals":11,"Year":"2005-2006"},{"Player":"Pierre-Marie Altidor-Cespedes","Points":139,"Rebounds":64,"Assists":86,"TurnOvers":56,"Steals":28,"Year":"2005-2006"},{"Player":"Josh Heytvelt","Points":51,"Rebounds":30,"Assists":2,"TurnOvers":13,"Steals":5,"Year":"2005-2006"},{"Player":"David Pendergraft","Points":108,"Rebounds":132,"Assists":26,"TurnOvers":27,"Steals":20,"Year":"2005-2006"},{"Player":"Jeremy Pargo","Points":89,"Rebounds":71,"Assists":67,"TurnOvers":54,"Steals":29,"Year":"2005-2006"},{"Player":"Erroll Knight","Points":65,"Rebounds":57,"Assists":29,"TurnOvers":12,"Steals":11,"Year":"2005-2006"},{"Player":"Larry Gurganious","Points":46,"Rebounds":44,"Assists":16,"TurnOvers":15,"Steals":17,"Year":"2005-2006"},{"Player":"Colin Floyd","Points":3,"Rebounds":1,"Assists":0,"TurnOvers":0,"Steals":0,"Year":"2005-2006"},{"Player":"Mamery Diallo","Points":6,"Rebounds":4,"Assists":0,"TurnOvers":3,"Steals":0,"Year":"2005-2006"},{"Player":"Nathan Doudney","Points":6,"Rebounds":2,"Assists":5,"TurnOvers":1,"Steals":1,"Year":"2005-2006"},{"Player":"Stephen Gentry","Points":0,"Rebounds":1,"Assists":0,"TurnOvers":0,"Steals":0,"Year":"2005-2006"},{"Player":"Adam Morrison","Points":589,"Rebounds":171,"Assists":88,"TurnOvers":52,"Steals":19,"Year":"2004-2005"},{"Player":"Ronny Turiaf","Points":493,"Rebounds":295,"Assists":48,"TurnOvers":70,"Steals":12,"Year":"2004-2005"},{"Player":"Derek Raivio","Points":403,"Rebounds":82,"Assists":149,"TurnOvers":66,"Steals":49,"Year":"2004-2005"},{"Player":"J.P. Batista","Points":360,"Rebounds":180,"Assists":26,"TurnOvers":64,"Steals":21,"Year":"2004-2005"},{"Player":"Sean Mallon","Points":235,"Rebounds":131,"Assists":36,"TurnOvers":40,"Steals":12,"Year":"2004-2005"},{"Player":"Erroll Knight","Points":172,"Rebounds":114,"Assists":29,"TurnOvers":44,"Steals":15,"Year":"2004-2005"},{"Player":"Nathan Doudney","Points":23,"Rebounds":11,"Assists":13,"TurnOvers":5,"Steals":10,"Year":"2004-2005"},{"Player":"David Pendergraft","Points":90,"Rebounds":82,"Assists":16,"TurnOvers":21,"Steals":8,"Year":"2004-2005"},{"Player":"Pierre-Marie Altidor-Cespedes","Points":62,"Rebounds":37,"Assists":75,"TurnOvers":40,"Steals":20,"Year":"2004-2005"},{"Player":"Brian Michaelson","Points":14,"Rebounds":6,"Assists":5,"TurnOvers":1,"Steals":2,"Year":"2004-2005"},{"Player":"Calum MacLeod","Points":8,"Rebounds":2,"Assists":0,"TurnOvers":3,"Steals":0,"Year":"2004-2005"},{"Player":"Stephen Gentry","Points":5,"Rebounds":1,"Assists":0,"TurnOvers":2,"Steals":0,"Year":"2004-2005"},{"Player":"Colin Floyd","Points":0,"Rebounds":1,"Assists":1,"TurnOvers":1,"Steals":1,"Year":"2004-2005"},{"Player":"Ronny Turiaf","Points":470,"Rebounds":185,"Assists":45,"TurnOvers":71,"Steals":16,"Year":"2003-2004"},{"Player":"Blake Stepp","Points":442,"Rebounds":138,"Assists":207,"TurnOvers":90,"Steals":36,"Year":"2003-2004"},{"Player":"Cory Violette","Points":417,"Rebounds":243,"Assists":44,"TurnOvers":52,"Steals":31,"Year":"2003-2004"},{"Player":"Adam Morrison","Points":343,"Rebounds":129,"Assists":43,"TurnOvers":35,"Steals":11,"Year":"2003-2004"},{"Player":"Erroll Knight","Points":172,"Rebounds":89,"Assists":46,"TurnOvers":38,"Steals":19,"Year":"2003-2004"},{"Player":"Sean Mallon","Points":173,"Rebounds":84,"Assists":18,"TurnOvers":26,"Steals":16,"Year":"2003-2004"},{"Player":"Kyle Bankhead","Points":172,"Rebounds":68,"Assists":82,"TurnOvers":23,"Steals":33,"Year":"2003-2004"},{"Player":"Tony Skinner","Points":109,"Rebounds":89,"Assists":21,"TurnOvers":25,"Steals":9,"Year":"2003-2004"},{"Player":"Richard Fox","Points":61,"Rebounds":46,"Assists":9,"TurnOvers":13,"Steals":5,"Year":"2003-2004"},{"Player":"Derek Raivio","Points":94,"Rebounds":19,"Assists":31,"TurnOvers":22,"Steals":11,"Year":"2003-2004"},{"Player":"Brian Michaelson","Points":12,"Rebounds":4,"Assists":1,"TurnOvers":4,"Steals":1,"Year":"2003-2004"},{"Player":"Colin Floyd","Points":6,"Rebounds":5,"Assists":0,"TurnOvers":3,"Steals":1,"Year":"2003-2004"},{"Player":"Stephen Gentry","Points":2,"Rebounds":3,"Assists":1,"TurnOvers":2,"Steals":0,"Year":"2003-2004"},{"Player":"Blake Stepp","Points":593,"Rebounds":123,"Assists":198,"TurnOvers":110,"Steals":54,"Year":"2002-2003"},{"Player":"Ronny Turiaf","Points":515,"Rebounds":206,"Assists":19,"TurnOvers":64,"Steals":20,"Year":"2002-2003"},{"Player":"Cory Violette","Points":364,"Rebounds":257,"Assists":32,"TurnOvers":52,"Steals":31,"Year":"2002-2003"},{"Player":"Tony Skinner","Points":275,"Rebounds":108,"Assists":35,"TurnOvers":46,"Steals":25,"Year":"2002-2003"},{"Player":"Kyle Bankhead","Points":240,"Rebounds":88,"Assists":67,"TurnOvers":23,"Steals":21,"Year":"2002-2003"},{"Player":"Richard Fox","Points":186,"Rebounds":95,"Assists":29,"TurnOvers":30,"Steals":3,"Year":"2002-2003"},{"Player":"Zach Gourde","Points":158,"Rebounds":95,"Assists":16,"TurnOvers":43,"Steals":10,"Year":"2002-2003"},{"Player":"Joshua Reisman","Points":96,"Rebounds":33,"Assists":18,"TurnOvers":21,"Steals":19,"Year":"2002-2003"},{"Player":"Winston Brooks","Points":95,"Rebounds":89,"Assists":97,"TurnOvers":67,"Steals":30,"Year":"2002-2003"},{"Player":"Brian Michaelson","Points":13,"Rebounds":8,"Assists":5,"TurnOvers":1,"Steals":0,"Year":"2002-2003"},{"Player":"Tyler Amaya","Points":18,"Rebounds":19,"Assists":4,"TurnOvers":8,"Steals":2,"Year":"2002-2003"},{"Player":"Colin Floyd","Points":5,"Rebounds":4,"Assists":0,"TurnOvers":0,"Steals":3,"Year":"2002-2003"},{"Player":"Dustin Villepigue","Points":0,"Rebounds":2,"Assists":0,"TurnOvers":1,"Steals":0,"Year":"2002-2003"},{"Player":"Dan Dickau","Points":672,"Rebounds":96,"Assists":149,"TurnOvers":92,"Steals":26,"Year":"2001-2002"},{"Player":"Zach Gourde","Points":438,"Rebounds":212,"Assists":35,"TurnOvers":79,"Steals":14,"Year":"2001-2002"},{"Player":"Cory Violette","Points":421,"Rebounds":274,"Assists":32,"TurnOvers":43,"Steals":30,"Year":"2001-2002"},{"Player":"Blake Stepp","Points":284,"Rebounds":116,"Assists":120,"TurnOvers":67,"Steals":28,"Year":"2001-2002"},{"Player":"Ronny Turiaf","Points":235,"Rebounds":161,"Assists":16,"TurnOvers":54,"Steals":12,"Year":"2001-2002"},{"Player":"Alex Hernandez","Points":193,"Rebounds":123,"Assists":37,"TurnOvers":36,"Steals":27,"Year":"2001-2002"},{"Player":"Anthony Reason","Points":177,"Rebounds":156,"Assists":45,"TurnOvers":30,"Steals":22,"Year":"2001-2002"},{"Player":"Kyle Bankhead","Points":132,"Rebounds":40,"Assists":31,"TurnOvers":14,"Steals":14,"Year":"2001-2002"},{"Player":"Winston Brooks","Points":34,"Rebounds":22,"Assists":40,"TurnOvers":24,"Steals":11,"Year":"2001-2002"},{"Player":"Germayne Forbes","Points":44,"Rebounds":23,"Assists":8,"TurnOvers":10,"Steals":3,"Year":"2001-2002"},{"Player":"Brian Michaelson","Points":18,"Rebounds":11,"Assists":5,"TurnOvers":1,"Steals":1,"Year":"2001-2002"},{"Player":"Jay Sherrell","Points":29,"Rebounds":25,"Assists":4,"TurnOvers":3,"Steals":1,"Year":"2001-2002"}]
+  $scope.controls = {
+ "x": {
+ "name": "x",
+"value": "Steals",
+"values": [ "Player", "Points", "Rebounds", "Assists", "TurnOvers", "Steals", "Year" ],
+"label": "Select  x :" 
+},
+"y": {
+ "name": "y",
+"value": "Points",
+"values": [ "Player", "Points", "Rebounds", "Assists", "TurnOvers", "Steals", "Year" ],
+"label": "Select  y :" 
+} 
+}           
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){  
+	var data = d3.nest()
+		.key(function(d){
+			return opts.group === undefined ? 'main' : d[opts.group]
+		})
+		.entries(data)
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	
+          
+	chart.xAxis
+  .axisLabel("Points")
+
+	
+	
+	chart.yAxis
+  .axisLabel("Steals")
+
+	d3.select("#" + opts.id + ' svg')
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+    
+  </body>
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script 
+    src='https://google-code-prettify.googlecode.com/svn-history/r232/trunk/src/lang-r.js'>
+  </script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+</html>

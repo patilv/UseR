@@ -1,0 +1,129 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/cosmo/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
+    <link rel='stylesheet' href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css">
+    <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
+    
+    <script src='C:/Users/patil/Documents/R/win-library/3.0/rCharts/libraries/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 100%;
+      height: 400px;
+    }
+    </style>
+    
+  </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl" ng-init="drawChart()">
+  <div class='row'>
+    <div class='span3'>
+      <form class='well'>
+        <label><b>Select  x :</b></label>
+    		<select ng-model="opts.x.var" 
+          ng-options="ctl for ctl in controls.x.values">   
+    		</select><br>
+        <label><b>Select  y :</b></label>
+    		<select ng-model="opts.y.var" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+      </form>
+    </div>
+    <div class='span8'>
+      <div class="bs-docs-example">
+        <div id='chart211c5d2b4b87' class='rChart '>
+          <svg></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type='text/javascript'>
+function DemoCtrl($scope){
+  $scope.chartParams = {
+ "dom": "chart211c5d2b4b87",
+"width":    700,
+"height":    500,
+"layers": [
+ {
+ "x": "Points",
+"y": "Steals",
+"data": {
+ "Player": [ "Kelly Olynyk", "Elias Harris", "Kevin Pangos", "Gary Bell, Jr.", "Sam Dower", "Przemek Karnowski", "David Stockton", "Drew Barham", "Guy Landry Edi", "Kyle Dranginis", "Mike Hart", "Rem Bakamus", "Brian Bhaskar", "Kevin Pangos", "Elias Harris", "Robert Sacre", "Gary Bell, Jr.", "Sam Dower", "Guy Landry Edi", "Marquise Carter", "David Stockton", "Ryan Spangler", "Mike Hart", "Mathis Monninghoff", "Mathis Keita", "Steven Gray", "Robert Sacre", "Elias Harris", "Sam Dower", "Marquise Carter", "Kelly Olynyk", "Demetri Goodson", "Manny Arop", "Mathis Monninghoff", "David Stockton", "Mathis Keita", "Mike Hart", "Matt Bouldin", "Elias Harris", "Steven Gray", "Robert Sacre", "Demetri Goodson", "Bol Kong", "Kelly Olynyk", "Manny Arop", "G.J. Vilarino", "Grant Gibbs", "Will Foster", "Andy Poling", "Mike Hart", "Chris Pontarolo-Maag", "Josh Heytvelt", "Matt Bouldin", "Austin Daye", "Jeremy Pargo", "Micah Downs", "Steven Gray", "Demetri Goodson", "Robert Sacre", "Ira Brown", "Andrew Sorenson", "Will Foster", "Chris Pontarolo-Maag", "Matt Bouldin", "Jeremy Pargo", "Austin Daye", "Josh Heytvelt", "David Pendergraft", "Steven Gray", "Micah Downs", "Abdullahi Kuso", "Larry Gurganious", "Robert Sacre", "Ira Brown", "Theo Davis", "Will Foster", "Andrew Sorenson", "Derek Raivio", "Josh Heytvelt", "Jeremy Pargo", "Matt Bouldin", "Micah Downs", "Sean Mallon", "David Pendergraft", "Abdullahi Kuso", "Pierre-Marie Altidor-Cespedes", "David Burgess", "Will Foster", "Andrew Sorenson", "Jordan Mast", "Adam Morrison", "J.P. Batista", "Derek Raivio", "Sean Mallon", "Pierre-Marie Altidor-Cespedes", "Josh Heytvelt", "David Pendergraft", "Jeremy Pargo", "Erroll Knight", "Larry Gurganious", "Colin Floyd", "Mamery Diallo", "Nathan Doudney", "Stephen Gentry", "Adam Morrison", "Ronny Turiaf", "Derek Raivio", "J.P. Batista", "Sean Mallon", "Erroll Knight", "Nathan Doudney", "David Pendergraft", "Pierre-Marie Altidor-Cespedes", "Brian Michaelson", "Calum MacLeod", "Stephen Gentry", "Colin Floyd", "Ronny Turiaf", "Blake Stepp", "Cory Violette", "Adam Morrison", "Erroll Knight", "Sean Mallon", "Kyle Bankhead", "Tony Skinner", "Richard Fox", "Derek Raivio", "Brian Michaelson", "Colin Floyd", "Stephen Gentry", "Blake Stepp", "Ronny Turiaf", "Cory Violette", "Tony Skinner", "Kyle Bankhead", "Richard Fox", "Zach Gourde", "Joshua Reisman", "Winston Brooks", "Brian Michaelson", "Tyler Amaya", "Colin Floyd", "Dustin Villepigue", "Dan Dickau", "Zach Gourde", "Cory Violette", "Blake Stepp", "Ronny Turiaf", "Alex Hernandez", "Anthony Reason", "Kyle Bankhead", "Winston Brooks", "Germayne Forbes", "Brian Michaelson", "Jay Sherrell" ],
+"Points": [    571,    495,    415,    306,    242,    184,    128,     89,     93,     96,     70,      7,      0,    450,    433,    384,    342,    274,    138,    127,    123,     56,     56,     38,     15,    474,    439,    421,    266,    220,    202,    183,    128,    128,    142,     61,     20,    514,    508,    462,    350,    217,    138,    130,    107,     57,     52,     58,     11,      8,      2,    507,    463,    431,    348,    325,    309,    129,     15,     90,     39,     25,      3,    403,    398,    347,    226,    287,    187,    262,    198,     86,     82,     27,      4,     12,      5,    613,    388,    410,    303,    137,    271,    248,    165,    110,      6,      8,      4,      5,    926,    636,    343,    225,    139,     51,    108,     89,     65,     46,      3,      6,      6,      0,    589,    493,    403,    360,    235,    172,     23,     90,     62,     14,      8,      5,      0,    470,    442,    417,    343,    172,    173,    172,    109,     61,     94,     12,      6,      2,    593,    515,    364,    275,    240,    186,    158,     96,     95,     13,     18,      5,      0,    672,    438,    421,    284,    235,    193,    177,    132,     34,     44,     18,     29 ],
+"Rebounds": [    235,    253,     93,     75,     94,     90,     60,     40,     65,     49,    137,      1,      3,     89,    281,    208,     81,    123,     60,     50,     34,     52,     95,     13,      9,    132,    222,    204,    114,     57,    133,     98,     82,     45,     45,     28,     34,    154,    241,    137,    183,     72,     46,     93,    119,     13,     46,     43,     11,     11,      5,    222,    139,    232,    117,    155,    109,     44,     14,     77,      5,     50,      2,    117,    121,    154,    108,    144,     64,    123,    133,     67,     52,     23,      1,     14,      5,    106,    193,    146,    124,     63,    143,    151,    158,     56,      8,     13,      2,      6,    182,    310,     70,    150,     64,     30,    132,     71,     57,     44,      1,      4,      2,      1,    171,    295,     82,    180,    131,    114,     11,     82,     37,      6,      2,      1,      1,    185,    138,    243,    129,     89,     84,     68,     89,     46,     19,      4,      5,      3,    123,    206,    257,    108,     88,     95,     95,     33,     89,      8,     19,      4,      2,     96,    212,    274,    116,    161,    123,    156,     40,     22,     23,     11,     25 ],
+"Assists": [     55,     53,    116,     73,     11,      7,    119,     11,     10,     34,     39,      1,      1,    111,     41,     24,     66,     19,     22,     56,     79,      4,     19,      8,      6,    136,     40,     45,     12,     72,     26,     91,     15,     11,     73,     15,      6,    132,     38,     98,     20,     61,     18,     26,     23,      5,     21,      8,      0,      4,      2,     22,    115,     37,    167,     39,     70,     54,      0,      6,      0,      0,      2,     93,    199,     32,     13,     28,     35,     46,      7,     16,      7,      3,      0,      0,      0,     89,     11,    156,    104,     16,     28,     32,     11,     42,      1,      0,      1,      1,     58,     46,     87,     38,     86,      2,     26,     67,     29,     16,      0,      0,      5,      0,     88,     48,    149,     26,     36,     29,     13,     16,     75,      5,      0,      0,      1,     45,    207,     44,     43,     46,     18,     82,     21,      9,     31,      1,      0,      1,    198,     19,     32,     35,     67,     29,     16,     18,     97,      5,      4,      0,      0,    149,     35,     32,    120,     16,     37,     45,     31,     40,      8,      5,      4 ],
+"TurnOvers": [     77,     60,     51,     43,     30,     27,     43,      7,     19,     25,      8,      1,      0,     60,     58,     60,     53,     41,     23,     46,     49,      6,     15,      7,      4,     73,     75,     60,     28,     39,     42,     57,     25,     11,     37,     14,      5,     75,     64,     76,     68,     54,     15,     21,     15,     10,     16,     15,      2,      2,      2,     43,     58,     73,     81,     26,     30,     34,      2,     18,      2,     10,      0,     79,    111,     56,     34,     28,     30,     48,     34,     25,     15,      2,      1,      6,      1,     61,     40,    111,     69,     15,     46,     29,     42,     37,      4,      4,      1,      3,     76,     80,     46,     48,     56,     13,     27,     54,     12,     15,      0,      3,      1,      0,     52,     70,     66,     64,     40,     44,      5,     21,     40,      1,      3,      2,      1,     71,     90,     52,     35,     38,     26,     23,     25,     13,     22,      4,      3,      2,    110,     64,     52,     46,     23,     30,     43,     21,     67,      1,      8,      0,      1,     92,     79,     43,     67,     54,     36,     30,     14,     24,     10,      1,      3 ],
+"Steals": [     22,     40,     52,     27,     16,      6,     53,      6,      9,     14,     30,      1,      1,     40,     30,     12,     23,     17,     14,     26,     27,      2,     25,      2,      5,     57,     27,     21,     14,     33,     12,     26,     11,      3,     32,     11,      7,     46,     32,     39,     23,     30,     14,     18,      9,      8,      4,      2,      0,      2,      0,     20,     52,     24,     46,     30,     35,     17,      1,     14,      4,      3,      0,     45,     47,     21,     16,     29,     24,     29,     18,     13,      7,      2,      0,      1,      2,     50,     11,     48,     27,      9,     15,     22,     13,     14,      0,      1,      1,      1,     35,     30,     47,     11,     28,      5,     20,     29,     11,     17,      0,      0,      1,      0,     19,     12,     49,     21,     12,     15,     10,      8,     20,      2,      0,      0,      1,     16,     36,     31,     11,     19,     16,     33,      9,      5,     11,      1,      1,      0,     54,     20,     31,     25,     21,      3,     10,     19,     30,      0,      2,      3,      0,     26,     14,     30,     28,     12,     27,     22,     14,     11,      3,      1,      1 ],
+"Year": [ "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2012-2013", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2011-2012", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2010-2011", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2009-2010", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2008-2009", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2007-2008", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2006-2007", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2005-2006", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2004-2005", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2003-2004", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2002-2003", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002", "2001-2002" ] 
+},
+"facet": "Year",
+"color": "Year",
+"type": "point" 
+} 
+],
+"facet": {
+ "type": "wrap",
+"var": "Year" 
+},
+"guides": [],
+"coord": [],
+"legendPosition": "none",
+"id": "chart211c5d2b4b87" 
+}
+  _.each($scope.chartParams.layers, function(el){
+    el.data = polyjs.data(el.data)
+  })
+      
+  $scope.controls = {
+ "x": {
+ "name": "x",
+"value": "Steals",
+"values": [ "Player", "Points", "Rebounds", "Assists", "TurnOvers", "Steals", "Year" ],
+"label": "Select  x :" 
+},
+"y": {
+ "name": "y",
+"value": "Points",
+"values": [ "Player", "Points", "Rebounds", "Assists", "TurnOvers", "Steals", "Year" ],
+"label": "Select  y :" 
+} 
+}
+  $scope.opts = $scope.chartParams.layers[0];
+    
+  $scope.drawChart = function(){
+    $scope.chart = polyjs.chart($scope.chartParams)
+	}
+
+  $scope.updateChart = function(){
+    $scope.chart.make($scope.chartParams)
+	}
+		
+	$scope.$watch('opts', function(){
+	  $scope.chartParams.layers[0] = $scope.opts;
+	  $scope.updateChart();
+	}, true)
+}
+</script>
+    
+  </body>
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script 
+    src='https://google-code-prettify.googlecode.com/svn-history/r232/trunk/src/lang-r.js'>
+  </script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+</html>

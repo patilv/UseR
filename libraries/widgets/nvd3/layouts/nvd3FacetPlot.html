@@ -1,0 +1,69 @@
+<script type='text/javascript'>
+    draw{{chartId}}()
+    setupChart = function(data, selector){
+      d3.select(selector)
+        .selectAll("div")
+        .data(data).enter()
+        .append('div').attr('class', 'preview')
+        .append('svg');
+    }
+
+    
+    
+    function draw{{chartId}}(){  
+      var opts = {{{ opts }}},
+        data = {{{ data }}}
+        
+var data = d3.nest()
+        .key(function(d){ return d[opts.facet]} )    
+        .entries(data)
+        
+      facets = d3.select("#" + opts.id)
+        .selectAll("div")
+        .data(data).enter()
+        .append('div').attr('class', 'facets')
+        .append('svg')
+          .attr("height", opts.height/d3.keys(data).length);
+        
+      facets.each(function(d, i){
+         var data = d3.nest()
+          .key(function(d){
+            return opts.group === undefined ? 'main' : d[opts.group]
+          })
+          .key(function(d){
+            return d[opts.x]
+          })          
+          .rollup(function(d){
+              tempobj = {};
+              tempobj[opts.x] = d[0][opts.x];
+              tempobj[opts.y] = d3.sum(d, function(dd) {
+                return dd[opts.y];
+              });
+              return tempobj;
+          })          
+          .entries(d.values)
+      
+         nv.addGraph(function() {
+           var chart = nv.models[opts.type]()
+             .x(function(d) {
+               return d.values[opts.x] })
+             .y(function(d) { return d.values[opts.y] })
+             .width(opts.width)
+             .height(opts.height / facets[0].length)
+         
+           
+          
+           
+        
+           
+      
+         d3.select(facets[0][i])
+          .datum(d3.values(data))
+          .transition().duration(500)
+          .call(chart);
+
+          nv.utils.windowResize(chart.update);
+        });
+      });
+    };
+</script>
