@@ -175,16 +175,18 @@ GUstats[1, ]
 
 ```r
 corrmat = cor(GUstats[c(-1, -7)])
+```
+
+```
+## Error: object 'GUstats' not found
+```
+
+```r
 corrmat
 ```
 
 ```
-##           Points Rebounds Assists TurnOvers Steals
-## Points    1.0000   0.8173  0.6111    0.8572 0.7171
-## Rebounds  0.8173   1.0000  0.3292    0.7324 0.5367
-## Assists   0.6111   0.3292  1.0000    0.7912 0.8451
-## TurnOvers 0.8572   0.7324  0.7912    1.0000 0.7899
-## Steals    0.7171   0.5367  0.8451    0.7899 1.0000
+## Error: object 'corrmat' not found
 ```
 
 ---  x:4000 y:-4000 z=1000 rotx:20 roty:15
@@ -196,7 +198,9 @@ library(PerformanceAnalytics)
 chart.Correlation(GUstats[2:6])
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+```
+## Error: object 'GUstats' not found
+```
 
 ---  x:-4000 y:-4000 z=200 rotx:200 roty:150
 
@@ -205,7 +209,9 @@ library(corrplot)
 corrplot(corrmat)
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+```
+## Error: object 'corrmat' not found
+```
 
 
 
@@ -226,24 +232,18 @@ library(plyr)
 sumcomponents = ddply(GUstats, .(Year), summarize, Total.Points = sum(Points), 
     Total.Rebounds = sum(Rebounds), Total.Assists = sum(Assists), Total.TurnOvers = sum(TurnOvers), 
     Total.Steals = sum(Steals))
+```
+
+```
+## Error: object 'GUstats' not found
+```
+
+```r
 head(sumcomponents)
 ```
 
 ```
-##        Year Total.Points Total.Rebounds Total.Assists Total.TurnOvers
-## 1 2001-2002         2677           1259           522             453
-## 2 2002-2003         2558           1127           520             466
-## 3 2003-2004         2473           1102           548             404
-## 4 2004-2005         2454           1113           486             409
-## 5 2005-2006         2643           1118           460             431
-## 6 2006-2007         2668           1169           492             462
-##   Total.Steals
-## 1          189
-## 2          218
-## 3          189
-## 4          169
-## 5          234
-## 6          212
+## Error: object 'sumcomponents' not found
 ```
 
 ---  x:4000 y:-6000 z=100 rotx:120 roty:215 
@@ -253,11 +253,20 @@ head(sumcomponents)
 library(reshape2)
 library(ggplot2)
 GUstatsmelt = melt(sumcomponents, id = c("Year"))
+```
+
+```
+## Error: object 'sumcomponents' not found
+```
+
+```r
 ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)) + 
     geom_point() + geom_line() + theme(axis.text.x = element_text(angle = -90))
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+```
+## Error: object 'GUstatsmelt' not found
+```
 
 
 ---  x:4000 y:6000 z=1500 rotx:320 roty:415  
@@ -266,7 +275,18 @@ ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)
 ```r
 library(rCharts)
 hplot = hPlot(value ~ Year, data = GUstatsmelt, type = "line", group = "variable")
-hplot$save("hplot.html")
+```
+
+```
+## Error: object 'GUstatsmelt' not found
+```
+
+```r
+hplot$save("hplot.html", cdn = TRUE)
+```
+
+```
+## Error: object 'hplot' not found
 ```
 
 <iframe src="hplot.html" width=975 height=800> </iframe>
@@ -279,7 +299,9 @@ hplot$save("hplot.html")
 ggplot(GUstats, aes(x = Points, y = Steals, color = Year)) + geom_point()
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+```
+## Error: object 'GUstats' not found
+```
 
 
 
@@ -294,7 +316,7 @@ nvp2$yAxis(axisLabel = "Steals")
 nvp2$addControls("x", "Steals", names(GUstats))
 nvp2$addControls("y", "Points", names(GUstats))
 nvp2$addParams(width = 500, height = 400)
-nvp2$save("nvdcontrols.html")
+nvp2$save("nvdcontrols.html", cdn = TRUE)
 ```
 
 <iframe src="nvdcontrols.html" width=1200 height=800> </iframe>
@@ -308,7 +330,9 @@ ggplot(GUstats, aes(x = Points, y = Steals, color = Year)) + geom_point() +
     theme(legend.position = ("none")) + facet_wrap(~Year)
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
+```
+## Error: object 'GUstats' not found
+```
 
 
 ---  x:0 y:-6000 z=400 rotx:2000 roty:150
@@ -320,7 +344,7 @@ rp2$set(legendPosition = "none")
 rp2$addParams(width = 500, height = 500)
 rp2$addControls("x", "Steals", names(GUstats))
 rp2$addControls("y", "Points", names(GUstats))
-rp2$save("rp2.html")
+rp2$save("rp2.html", cdn = TRUE)
 ```
 
 <iframe src="rp2.html" width=1200 height=600> </iframe>
@@ -336,7 +360,7 @@ d1 <- dPlot(x = "Steals", y = "Points", data = GUstats, groups = c("Player"),
 d1$addControls("x", "Steals", names(GUstats))
 d1$addControls("y", "Points", names(GUstats))
 d1$set(storyboard = "Year")
-d1$save("dimple.html")
+d1$save("dimple.html", cdn = TRUE)
 ```
 
 <iframe src="dimple.html" width=1200 height=1000> </iframe>

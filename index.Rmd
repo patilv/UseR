@@ -191,7 +191,7 @@ ggplot(GUstatsmelt, aes(x=Year,y=value, color=variable, group=variable))+ geom_p
 ```{r echo = T }
 library(rCharts)
 hplot=hPlot(value ~ Year, data = GUstatsmelt, type = 'line', group = 'variable')
-hplot$save("hplot.html")
+hplot$save("hplot.html", cdn=TRUE)
 ```
 <iframe src="hplot.html" width=975 height=800> </iframe>
 
@@ -213,7 +213,7 @@ nvp2$yAxis(axisLabel = "Steals")
 nvp2$addControls("x", "Steals",names(GUstats))
 nvp2$addControls("y", "Points",names(GUstats))
 nvp2$addParams(width = 500, height = 400)
-nvp2$save("nvdcontrols.html")
+nvp2$save("nvdcontrols.html", cdn=TRUE)
 
 ```
 <iframe src="nvdcontrols.html" width=1200 height=800> </iframe>
@@ -233,7 +233,7 @@ rp2$set(legendPosition="none")
 rp2$addParams(width = 500, height = 500)
 rp2$addControls("x", "Steals",names(GUstats))
 rp2$addControls("y", "Points",names(GUstats))
-rp2$save("rp2.html")
+rp2$save("rp2.html", cdn=TRUE)
 ```
 <iframe src="rp2.html" width=1200 height=600> </iframe>
 
@@ -247,7 +247,7 @@ d1 <- dPlot(x= "Steals", y="Points",data = GUstats,groups = c("Player"),
 d1$addControls("x", "Steals",names(GUstats))
 d1$addControls("y", "Points",names(GUstats))
 d1$set(storyboard = "Year") 
-d1$save("dimple.html")
+d1$save("dimple.html", cdn=TRUE)
 ```
 <iframe src="dimple.html" width=1200 height=1000> </iframe>
 

@@ -275,15 +275,15 @@ GUstats[1, ]
    >
  
  <pre><code class="r">corrmat = cor(GUstats[c(-1, -7)])
-corrmat
 </code></pre>
 
-<pre><code>##           Points Rebounds Assists TurnOvers Steals
-## Points    1.0000   0.8173  0.6111    0.8572 0.7171
-## Rebounds  0.8173   1.0000  0.3292    0.7324 0.5367
-## Assists   0.6111   0.3292  1.0000    0.7912 0.8451
-## TurnOvers 0.8572   0.7324  0.7912    1.0000 0.7899
-## Steals    0.7171   0.5367  0.8451    0.7899 1.0000
+<pre><code>## Error: object &#39;GUstats&#39; not found
+</code></pre>
+
+<pre><code class="r">corrmat
+</code></pre>
+
+<pre><code>## Error: object &#39;corrmat&#39; not found
 </code></pre>
 
 </div>
@@ -299,7 +299,8 @@ library(PerformanceAnalytics)
 chart.Correlation(GUstats[2:6])
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+<pre><code>## Error: object &#39;GUstats&#39; not found
+</code></pre>
 
 </div>
 <div id="slide-17" class="step " 
@@ -313,7 +314,8 @@ chart.Correlation(GUstats[2:6])
 corrplot(corrmat)
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
+<pre><code>## Error: object &#39;corrmat&#39; not found
+</code></pre>
 
 </div>
 <div id="slide-18" class="step " 
@@ -341,23 +343,15 @@ pairedVis(GUstats)
 sumcomponents = ddply(GUstats, .(Year), summarize, Total.Points = sum(Points), 
     Total.Rebounds = sum(Rebounds), Total.Assists = sum(Assists), Total.TurnOvers = sum(TurnOvers), 
     Total.Steals = sum(Steals))
-head(sumcomponents)
 </code></pre>
 
-<pre><code>##        Year Total.Points Total.Rebounds Total.Assists Total.TurnOvers
-## 1 2001-2002         2677           1259           522             453
-## 2 2002-2003         2558           1127           520             466
-## 3 2003-2004         2473           1102           548             404
-## 4 2004-2005         2454           1113           486             409
-## 5 2005-2006         2643           1118           460             431
-## 6 2006-2007         2668           1169           492             462
-##   Total.Steals
-## 1          189
-## 2          218
-## 3          189
-## 4          169
-## 5          234
-## 6          212
+<pre><code>## Error: object &#39;GUstats&#39; not found
+</code></pre>
+
+<pre><code class="r">head(sumcomponents)
+</code></pre>
+
+<pre><code>## Error: object &#39;sumcomponents&#39; not found
 </code></pre>
 
 </div>
@@ -371,11 +365,17 @@ head(sumcomponents)
  <pre><code class="r">library(reshape2)
 library(ggplot2)
 GUstatsmelt = melt(sumcomponents, id = c(&quot;Year&quot;))
-ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)) + 
+</code></pre>
+
+<pre><code>## Error: object &#39;sumcomponents&#39; not found
+</code></pre>
+
+<pre><code class="r">ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)) + 
     geom_point() + geom_line() + theme(axis.text.x = element_text(angle = -90))
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7"> </p>
+<pre><code>## Error: object &#39;GUstatsmelt&#39; not found
+</code></pre>
 
 </div>
 <div id="slide-21" class="step " 
@@ -387,7 +387,15 @@ ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)
  
  <pre><code class="r">library(rCharts)
 hplot = hPlot(value ~ Year, data = GUstatsmelt, type = &quot;line&quot;, group = &quot;variable&quot;)
-hplot$save(&quot;hplot.html&quot;)
+</code></pre>
+
+<pre><code>## Error: object &#39;GUstatsmelt&#39; not found
+</code></pre>
+
+<pre><code class="r">hplot$save(&quot;hplot.html&quot;, cdn = TRUE)
+</code></pre>
+
+<pre><code>## Error: object &#39;hplot&#39; not found
 </code></pre>
 
 <iframe src="hplot.html" width=975 height=800> </iframe>
@@ -403,7 +411,8 @@ hplot$save(&quot;hplot.html&quot;)
  <pre><code class="r">ggplot(GUstats, aes(x = Points, y = Steals, color = Year)) + geom_point()
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9"> </p>
+<pre><code>## Error: object &#39;GUstats&#39; not found
+</code></pre>
 
 </div>
 <div id="slide-23" class="step " 
@@ -420,7 +429,7 @@ nvp2$yAxis(axisLabel = &quot;Steals&quot;)
 nvp2$addControls(&quot;x&quot;, &quot;Steals&quot;, names(GUstats))
 nvp2$addControls(&quot;y&quot;, &quot;Points&quot;, names(GUstats))
 nvp2$addParams(width = 500, height = 400)
-nvp2$save(&quot;nvdcontrols.html&quot;)
+nvp2$save(&quot;nvdcontrols.html&quot;, cdn = TRUE)
 </code></pre>
 
 <iframe src="nvdcontrols.html" width=1200 height=800> </iframe>
@@ -437,7 +446,8 @@ nvp2$save(&quot;nvdcontrols.html&quot;)
     theme(legend.position = (&quot;none&quot;)) + facet_wrap(~Year)
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-11.png" alt="plot of chunk unnamed-chunk-11"> </p>
+<pre><code>## Error: object &#39;GUstats&#39; not found
+</code></pre>
 
 </div>
 <div id="slide-25" class="step " 
@@ -452,7 +462,7 @@ rp2$set(legendPosition = &quot;none&quot;)
 rp2$addParams(width = 500, height = 500)
 rp2$addControls(&quot;x&quot;, &quot;Steals&quot;, names(GUstats))
 rp2$addControls(&quot;y&quot;, &quot;Points&quot;, names(GUstats))
-rp2$save(&quot;rp2.html&quot;)
+rp2$save(&quot;rp2.html&quot;, cdn = TRUE)
 </code></pre>
 
 <iframe src="rp2.html" width=1200 height=600> </iframe>
@@ -470,7 +480,7 @@ rp2$save(&quot;rp2.html&quot;)
 d1$addControls(&quot;x&quot;, &quot;Steals&quot;, names(GUstats))
 d1$addControls(&quot;y&quot;, &quot;Points&quot;, names(GUstats))
 d1$set(storyboard = &quot;Year&quot;)
-d1$save(&quot;dimple.html&quot;)
+d1$save(&quot;dimple.html&quot;, cdn = TRUE)
 </code></pre>
 
 <iframe src="dimple.html" width=1200 height=1000> </iframe>
