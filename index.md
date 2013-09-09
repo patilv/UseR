@@ -175,18 +175,16 @@ GUstats[1, ]
 
 ```r
 corrmat = cor(GUstats[c(-1, -7)])
-```
-
-```
-## Error: object 'GUstats' not found
-```
-
-```r
 corrmat
 ```
 
 ```
-## Error: object 'corrmat' not found
+##           Points Rebounds Assists TurnOvers Steals
+## Points    1.0000   0.8173  0.6111    0.8572 0.7171
+## Rebounds  0.8173   1.0000  0.3292    0.7324 0.5367
+## Assists   0.6111   0.3292  1.0000    0.7912 0.8451
+## TurnOvers 0.8572   0.7324  0.7912    1.0000 0.7899
+## Steals    0.7171   0.5367  0.8451    0.7899 1.0000
 ```
 
 ---  x:4000 y:-4000 z=1000 rotx:20 roty:15
@@ -198,9 +196,7 @@ library(PerformanceAnalytics)
 chart.Correlation(GUstats[2:6])
 ```
 
-```
-## Error: object 'GUstats' not found
-```
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 ---  x:-4000 y:-4000 z=200 rotx:200 roty:150
 
@@ -209,9 +205,7 @@ library(corrplot)
 corrplot(corrmat)
 ```
 
-```
-## Error: object 'corrmat' not found
-```
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 
 
@@ -232,18 +226,24 @@ library(plyr)
 sumcomponents = ddply(GUstats, .(Year), summarize, Total.Points = sum(Points), 
     Total.Rebounds = sum(Rebounds), Total.Assists = sum(Assists), Total.TurnOvers = sum(TurnOvers), 
     Total.Steals = sum(Steals))
-```
-
-```
-## Error: object 'GUstats' not found
-```
-
-```r
 head(sumcomponents)
 ```
 
 ```
-## Error: object 'sumcomponents' not found
+##        Year Total.Points Total.Rebounds Total.Assists Total.TurnOvers
+## 1 2001-2002         2677           1259           522             453
+## 2 2002-2003         2558           1127           520             466
+## 3 2003-2004         2473           1102           548             404
+## 4 2004-2005         2454           1113           486             409
+## 5 2005-2006         2643           1118           460             431
+## 6 2006-2007         2668           1169           492             462
+##   Total.Steals
+## 1          189
+## 2          218
+## 3          189
+## 4          169
+## 5          234
+## 6          212
 ```
 
 ---  x:4000 y:-6000 z=100 rotx:120 roty:215 
@@ -253,20 +253,11 @@ head(sumcomponents)
 library(reshape2)
 library(ggplot2)
 GUstatsmelt = melt(sumcomponents, id = c("Year"))
-```
-
-```
-## Error: object 'sumcomponents' not found
-```
-
-```r
 ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)) + 
     geom_point() + geom_line() + theme(axis.text.x = element_text(angle = -90))
 ```
 
-```
-## Error: object 'GUstatsmelt' not found
-```
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
 
 
 ---  x:4000 y:6000 z=1500 rotx:320 roty:415  
@@ -275,18 +266,7 @@ ggplot(GUstatsmelt, aes(x = Year, y = value, color = variable, group = variable)
 ```r
 library(rCharts)
 hplot = hPlot(value ~ Year, data = GUstatsmelt, type = "line", group = "variable")
-```
-
-```
-## Error: object 'GUstatsmelt' not found
-```
-
-```r
 hplot$save("hplot.html", cdn = TRUE)
-```
-
-```
-## Error: object 'hplot' not found
 ```
 
 <iframe src="hplot.html" width=975 height=800> </iframe>
@@ -299,9 +279,7 @@ hplot$save("hplot.html", cdn = TRUE)
 ggplot(GUstats, aes(x = Points, y = Steals, color = Year)) + geom_point()
 ```
 
-```
-## Error: object 'GUstats' not found
-```
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
 
 
 
@@ -330,9 +308,7 @@ ggplot(GUstats, aes(x = Points, y = Steals, color = Year)) + geom_point() +
     theme(legend.position = ("none")) + facet_wrap(~Year)
 ```
 
-```
-## Error: object 'GUstats' not found
-```
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11.png) 
 
 
 ---  x:0 y:-6000 z=400 rotx:2000 roty:150
