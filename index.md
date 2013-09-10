@@ -373,6 +373,7 @@ Peter Carl & Brian G. Peterson: Performance Analytics <br>
 Prasad Patil, Hector Corrada Bravo, Jeff Leek: healthvis <br> 
 Ramnath Vaidyanathan: rCharts and slidify <br>
 JS developers whose work used through rCharts in this deck - NVD3, Highchart, Dimplechart, and Polychart <br>
+Bartek Szopka: ImpressJS framework used in the presentation
 The tireless developers providing resources in R and its libraries <br>
 R Resources listing at my blog: http://analyticsandvisualization.blogspot.com  or http://analyticsandvisualization.com <br><br>
 Sources of Images :<br>
