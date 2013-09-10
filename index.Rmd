@@ -86,7 +86,7 @@ An SPSS/SAS Convert's View <br><br>
 
 <img src= "assets/img/fig_7a_scholarlyimpactbig61.png" width= "450" height = "340" > | <img src="assets/img/fig_7b_scholarlyimpactlittle61.png" width= "450" height = "340"></td> 
 ---------|----------
-<supersub>2013 KD Nuggets Poll<img src="assets/img/kdnuggets2013.png" width= "450" height = "340" >    | <supersub>Kaggle Users <img src="assets/img/fig_2_competitions.png" width= "450" height = "340" >
+<supersub>2013 KD Nuggets Poll<img src="assets/img/kdnuggets2013.png" width= "450" height = "340" >    | <supersub>Kaggle Users,2011 <img src="assets/img/fig_2_competitions.png" width= "450" height = "340" >
 
 <supersub> Source: [Muenchen, Robert A, The Popularity of Data Analysis Software.] (http://r4stats.com/articles/popularity/), Retrieved 8/15/2013 
 
@@ -277,13 +277,16 @@ From Revolution Analytics <br>
 [Muenchen, Robert A, The Popularity of Data Analysis Software] (http://www.r4stats.com/articles/popularity/), Retrieved 8/15/2013 <br>
 [Revolution Analytics blog] (http://www.blog.revolutionanalytics.com/)<br>
 [Matthew Keller's Introduction to R ppt] (http://www.psych.colorado.edu/wiki/lib/exe/fetch.php?media=labs:learnr:lectures_and_homework:lecture1_sp2009.ppt)<br>
-Hadley Wickham: ggplot2 <br>
-Winston Chang: R Graphics Cookbook <br>
+Hadley Wickham: ggplot2, plyr, reshape2 <br>
+Taiyun Wei: corrplot <br>
+Peter Carl & Brian G. Peterson: Performance Analytics <br>
+Prasad Patil, Hector Corrada Bravo, Jeff Leek: healthvis <br> 
 Ramnath Vaidyanathan: rCharts and slidify <br>
 JS developers whose work used through rCharts in this deck - NVD3, Highchart, Dimplechart, and Polychart <br>
-All the tireless developers providing resources in R and its libraries <br>
+The tireless developers providing resources in R and its libraries <br>
 R Resources listing at my blog: http://analyticsandvisualization.blogspot.com  or http://analyticsandvisualization.com <br><br>
 Sources of Images :<br>
 John Chambers: http://www-stat.stanford.edu/~jmc4/CopyPhoto.jpg <br>
 Ross Ihaka: https://www.stat.auckland.ac.nz/S-Workshop/small-ihaka.gif<br>
-Robert Gentleman: https://www.stat.auckland.ac.nz/S-Workshop/small-robert.gif
+Robert Gentleman: https://www.stat.auckland.ac.nz/S-Workshop/small-robert.gif<br>
+R: R-Project site
