@@ -4,7 +4,8 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 ext_widgets: {rCharts: [libraries/nvd3, libraries/polycharts, libraries/dimple]}
-mode        : selfcontained # {standalone, draft}
+mode        : selfcontained # {selfcontained,standalone, draft}
+
 ---
 
 --- x:0 y:0 z:20 rotx:-40 roty:-10 rotz:30 
@@ -42,7 +43,7 @@ An SPSS/SAS Convert's View <br><br>
 
 1. Free and Open Source -No reinvention of wheel and tinkering opportunities<br>
 2. Coding in R - Reproducibility <br>
-3. Most new routines appear in R before any other statistical system<br>
+3. Routines generally appear in R before any other statistical system<br>
 <center><img src="assets/img/fig_10_cran1.png" alt="http://r4stats.com/2013/03/19/r-2012-growth-exceeds-sas-all-time-total/" title= "http://r4stats.com/2013/03/19/r-2012-growth-exceeds-sas-all-time-total/" width= "400" height = "300" ></center>
 <supersub> Source: [Muenchen, Robert A, The Popularity of Data Analysis Software.] (http://r4stats.com/articles/popularity/), Retrieved 8/15/2013
 
@@ -53,7 +54,7 @@ An SPSS/SAS Convert's View <br><br>
 4. Graphics - Great.... to ....Mindblowing<br>
 5. Excellent package distribution system - Internet<br>
 6. Compatible with most flavors of Unix, Mac OSX, and Windows<br>
-7. Connectivity with most database systems, languages, applications<br>
+7. Connectivity with database systems, import from different data formats<br>
 8. Community support is outstanding - user-base estimates of 250,000-2 million<br>
 
 <supersub> <a href= "http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html" target= "_blank"> Ashlee Vance's NY Times story of 2009</a></small>
@@ -283,6 +284,7 @@ Peter Carl & Brian G. Peterson: Performance Analytics <br>
 Prasad Patil, Hector Corrada Bravo, Jeff Leek: healthvis <br> 
 Ramnath Vaidyanathan: rCharts and slidify <br>
 JS developers whose work used through rCharts in this deck - NVD3, Highchart, Dimplechart, and Polychart <br>
+@timelyportfolio: Quick turnaround on angular JS feature with dimple <br>
 Bartek Szopka: ImpressJS framework used in the presentation
 The tireless developers providing resources in R and its libraries <br>
 R Resources listing at my blog: http://analyticsandvisualization.blogspot.com  or http://analyticsandvisualization.com <br><br>
